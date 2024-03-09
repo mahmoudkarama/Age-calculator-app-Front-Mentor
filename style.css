@@ -1,0 +1,166 @@
+@font-face {
+    font-family: pop-boldI;
+    src: url(assets/fonts/Poppins-BoldItalic.ttf);
+}
+@font-face {
+    font-family: pop-bold;
+    src: url(assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: pop-ExboldI;
+    src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: pop-Exbold;
+    src: url(assets/fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+    font-family: pop-regular;
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: pop-italic;
+    src: url(assets/fonts/Poppins-Italic.ttf);
+}
+
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --red: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --offwhite: hsl(0, 0%, 94%);
+    --offblack: hsl(0, 0%, 8%);
+    --greylight: hsl(0, 0%, 86%);
+    --greysmokey: hsl(0, 1%, 44%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: pop-ExboldI;
+    font-size: 32px;
+    background-color: var(--greylight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--offwhite);
+    padding: 20px;
+    border-radius: 10px 10px 60px 10px;
+    max-width: 400px;
+}
+
+@media (min-width: 575px) {
+    .container {
+        width: fit-content;
+    }
+    button {
+        left: 95% !important;
+    }
+}
+
+/* #### Style Enter Birth Day */
+.enter-age {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 25%;
+}
+
+.enter-day,
+.enter-month,
+.enter-year {
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+}
+
+.enter-age input {
+    background-color: var(--offwhite);
+    border: 1px solid var(--greylight);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.enter-age input::placeholder {
+    color: var(--greysmokey);
+    font-family: pop-bold;
+}
+
+.enter-age label {
+    font-family: pop-regular;
+    font-size: 10px;
+    color: var(--greysmokey);
+
+}
+
+/* ### Split */
+.split {
+    margin: 20px 0;
+    position: relative;
+}
+
+.split hr {
+    border: 1px solid var(--greylight);
+}
+
+.split button {
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translate(-50%);
+    background-color: var(--purple);
+    border-radius: 50%;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+}
+
+/* ## Style Display Age */
+
+#years,
+#months,
+#days {
+    color: var(--purple);
+}
+
+
+
+
+span.error,
+label.error
+ {
+    font-size: 7px;
+    color: red;
+    font-family: pop-regular;
+}
+
+input.error {
+    border-color: red;
+}
+.hide {
+    display: none;
+}
